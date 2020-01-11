@@ -1,0 +1,59 @@
+<?php
+	require_once("connection.php");
+	$query = "SELECT * FROM judul";
+	$hasil= mysqli_query($connect, $query);
+	$data=mysqli_fetch_array($hasil);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link href="img/xs_logo.png" rel="shortcut icon">
+<title><?php echo "".$data['judul']."";?></title>
+</head>
+<body>
+<header>
+		<div align="center">
+			<nav>
+				<ul>
+					<li><a href="home.html">HOME</a></li>
+					<li><a href="JMakan.html">Jenis makanan</a></li>
+					<li><a href="JMinuman.html">Jenis minuman</a></li>
+					<li><a href="Paket.html">PAKET</a></li>
+					<li><a href="Pemesanan.html">FORM PEMESANAN</a></li>
+					<li><a href="Pembayaran.html">FORM PEMBAYARAN</a></li>
+					<li><a href="Login.php">LOGOUT</a></li>
+				</ul>
+			</nav>
+		</div>	
+	</header>
+
+	<section>
+		<div align="center" class="kotak">
+			<h2 style="color: white;"><strong>PEMESANAN</strong></h2>
+				<form method="post" action="proses-pemesanan.php">
+					<tr>
+						<p>Masukkan Nama</p>
+						<input type="text" id="nama" name="nama" placeholder="Nama" required>
+					</tr>
+					<tr>
+						<p>Masukkan Alamat Acara</p>
+						<input type="text" id="alamatac" name="alamatac" placeholder="Alamat Acara" maxlength="49" required>
+					</tr>
+					<tr>
+						<p>Nomer Telephone</p>
+    				      <input type="number" id="number" name="nomer" placeholder="Nomer Telefon" maxlength="12" required>
+					</tr>
+				
+					<div>
+						<button type="submit" style="width: 60px; height: 30px;">Masuk</button>
+					</div>
+				</form>
+		</div>
+	</section>
+</body>
+</html>
+

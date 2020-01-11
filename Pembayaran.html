@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/justin.css">
+<link href="img/xs_logo.png" rel="shortcut icon">
+<title>PEMESANAN</title>
+</head>
+<body>
+	<header>
+		<div align="center">
+			<nav>
+				<ul>
+					<li><a href="home.html">HOME</a></li>
+					<li><a href="JMakan.html">Jenis makanan</a></li>
+					<li><a href="JMinuman.html">Jenis minuman</a></li>
+					<li><a href="Paket.html">PAKET</a></li>
+					<li><a href="Pemesanan.html">FORM PEMESANAN</a></li>
+					<li><a href="Pembayaran.html">FORM PEMBAYARAN</a></li>
+					<li><a href="Login.php">LOGOUT</a></li>
+				</ul>
+			</nav>
+		</div>	
+	</header>
+
+
+
+	<section>
+		<div align="center" class="kotak">
+			<h2 style="color: white;"><strong>PEMBYARAN</strong></h2>
+				<form method="post" action="proses_pembayaran.php">
+					<tr>
+						<p>Masukkan Nama Rekening</p>
+						<input type="text" id="namarek" name="namarek" placeholder="Nama Reking" required>
+					</tr>
+					<tr>
+						<p>Masukkan No. Rekening</p>
+						<input type="number" name="norek" placeholder="Nomer Rekening">
+					</tr>
+					<div>
+						<button type="submit" style="width: 60px; height: 30px;">Masuk</button>
+					</div>
+				</form>
+
+		</div>
+	</section>
+
+</body>
+</html>
+

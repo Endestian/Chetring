@@ -1,0 +1,73 @@
+<?php
+	require_once("connection.php");
+	$query = "SELECT * FROM judul";
+	$hasil= mysqli_query($connect, $query);
+	$data=mysqli_fetch_array($hasil);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link href="img/xs_logo.png" rel="shortcut icon">
+<title><?php echo "".$data['judul']."";?></title>
+</head>
+<body>
+	<header>
+		<div align="center" class="kotak">
+			<h2 style="color: white;"><strong>PEMESANAN</strong></h2>
+				<form method="post" action="Pembayaran.html">
+				<table align="center" class="masukkan">
+					<tr>
+						<td>
+							<label style="text-align: center;">FORM MENGISI JUMLAH YANG DI PESAN</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="">MAKANAN</label>
+						</td>
+                   		<td>
+							:
+						</td>
+						<td>
+							<input rows="5" cols="60" type="number" name ="" placeholder="JUMLAH MAKANAN" maxlength="30" required></input>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="">MINUMAN</label>
+						</td>
+                   		<td>
+							:
+						</td>
+						<td>
+							<input rows="5" cols="60" type="number" name ="" placeholder="JUMLAH MINUMAN" maxlength="30" required></input>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="">PAKET</label>
+						</td>
+                   		<td>
+							:
+						</td>
+						<td>
+							<input rows="5" cols="60" type="number" name ="" placeholder="JUMLAH PAKET" maxlength="30" required></input>
+						</td>
+					</tr>
+					<div>
+						<a href="Pemesanan.html"><img src="img/12.jpg" style="width: 60px; height: 30px;"></img></a>
+						<button type="submit" style="width: 60px; height: 30px;">Masuk</button>
+					</div>
+				</table>
+					
+				</form>
+		</div>
+	</header>
+		
+</body>
+</html>
+

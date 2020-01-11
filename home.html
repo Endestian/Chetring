@@ -1,0 +1,53 @@
+<?php
+	require_once("connection.php");
+	$query = "SELECT * FROM judul";
+	$hasil= mysqli_query($connect, $query);
+	$data=mysqli_fetch_array($hasil);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/justin.css">
+</head>
+<body>
+<header>
+		<div align="center">
+			<nav>
+				<ul>
+					<li><a href="home.html">HOME</a></li>
+					<li><a href="JMakan.html">Jenis makanan</a></li>
+					<li><a href="JMinuman.html">Jenis minuman</a></li>
+					<li><a href="Paket.html">PAKET</a></li>
+					<li><a href="Pemesanan.html">FORM PEMESANAN</a></li>
+					<li><a href="Pembayaran.html">FORM PEMBAYARAN</a></li>
+					<li><a href="Login.php">LOGOUT</a></li>
+				</ul>
+			</nav>
+		</div>	
+	</header>
+
+	<head>
+		<form>
+			<div>
+				<td>
+					<button><a href="Promosi.html"><img src=""></a></button>
+				</td>
+				<td>
+					<button><a href="Promosi.html"><img src=""></a></button>
+				</td>
+				<td>
+					<button><a href="Promosi.html"><img src=""></a></button>
+				</td>
+			</div>
+		</form>
+	</head>
+	
+	<section>
+		
+	</section>
+</body>
+</html>
+
